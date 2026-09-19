@@ -1,0 +1,27 @@
+{
+  "name": "@snapforge/companion",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Desktop companion CLI — indexer, watcher, landing service, Office Kit bridge",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "snapforge": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:bridge": "vitest run --reporter=verbose test/bridge.test.ts",
+    "typecheck": "tsc --noEmit",
+    "start": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "typescript": "~5.6.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0",
+    "tsx": "^4.19.0",
+    "@snapforge/schema": "*"
+  }
+}

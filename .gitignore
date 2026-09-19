@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Model binaries
+*.bin
+*.onnx
+*.tflite
+*.so
+
+# Local index files
+index.sfx
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+
+# Environment
+.env
+.env.local
+
+# Temporary
+tmp/
+temp/
+
+# Build pack and dossier (reference only)
+BUILD-PACK.md
+dossier_extracted.md
+*.pdf

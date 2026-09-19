@@ -1,0 +1,18 @@
+{
+  "name": "@snapforge/bench",
+  "version": "0.1.0",
+  "private": true,
+  "description": "40-sketch benchmark set + scoring harness",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "bench": "tsx src/run.ts",
+    "accept": "tsx src/accept.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "@snapforge/schema": "*",
+    "@snapforge/renderer": "*"
+  }
+}
