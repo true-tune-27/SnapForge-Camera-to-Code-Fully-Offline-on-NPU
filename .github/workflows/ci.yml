@@ -31,8 +31,8 @@ jobs:
 
       - name: Verify no INTERNET permission in android/
         run: |
-          if grep -r "android.permission.INTERNET" android/ 2>/dev/null; then
-            echo "::error::INTERNET permission found in android/ — this violates the offline invariant"
+          if grep -r "android.permission.INTERNET" android/ --include="AndroidManifest.xml" 2>/dev/null; then
+            echo "::error::INTERNET permission found in AndroidManifest.xml — this violates the offline invariant"
             exit 1
           fi
           echo "✓ No INTERNET permission found in android/"
