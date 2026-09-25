@@ -1,0 +1,57 @@
+{
+  "repo": {
+    "name": "minimal-web",
+    "framework": "react-ts",
+    "indexedAt": "2026-09-19T14:00:00Z"
+  },
+  "conventions": {
+    "screenDir": "src/pages",
+    "fileCase": "kebab-case",
+    "ext": ".tsx",
+    "exportStyle": "default",
+    "styleSystem": "css-modules",
+    "importAlias": "~/"
+  },
+  "tokens": {
+    "space": {
+      "sm": 8,
+      "md": 16,
+      "lg": 32
+    },
+    "radius": {
+      "base": 4
+    }
+  },
+  "components": [
+    {
+      "name": "Box",
+      "import": "~/components/Box",
+      "export": "default",
+      "props": [
+        { "name": "children", "type": "ReactNode" }
+      ],
+      "maps": ["container.card", "container.panel", "container"],
+      "usageCount": 100
+    },
+    {
+      "name": "Btn",
+      "import": "~/components/Btn",
+      "export": "default",
+      "props": [
+        { "name": "children", "type": "ReactNode" }
+      ],
+      "maps": ["button", "button.primary"],
+      "usageCount": 40
+    },
+    {
+      "name": "Txt",
+      "import": "~/components/Txt",
+      "export": "default",
+      "props": [
+        { "name": "children", "type": "ReactNode" }
+      ],
+      "maps": ["text", "heading"],
+      "usageCount": 200
+    }
+  ]
+}

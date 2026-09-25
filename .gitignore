@@ -16,7 +16,7 @@ models/weights/
 *.safetensors
 
 # Local index files
-index.sfx
+/index.sfx
 
 # IDE
 .idea/
@@ -60,4 +60,4 @@ native/OpenCV-android-sdk/
 
 # Bench results (generated)
 bench/results/
-bench/repos/
+!bench/repos/**/index.sfx

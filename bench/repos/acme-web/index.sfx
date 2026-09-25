@@ -1,0 +1,41 @@
+{
+  "repo": {
+    "name": "acme-web",
+    "framework": "react-ts",
+    "indexedAt": "2026-01-01T00:00:00Z"
+  },
+  "components": [
+    { "name": "Avatar", "import": "@/components/ui/Avatar", "export": "default", "props": [{ "name": "src", "type": "string", "optional": true }, { "name": "alt", "type": "string", "optional": true }, { "name": "size", "type": "'sm' | 'md' | 'lg'", "optional": true }], "maps": ["image"], "usageCount": 25 },
+    { "name": "Badge", "import": "@/components/ui/Badge", "export": "named", "props": [{ "name": "children", "type": "ReactNode", "optional": true }, { "name": "pad", "type": "SpaceToken", "optional": true }, { "name": "radius", "type": "RadiusToken", "optional": true }, { "name": "variant", "type": "'primary' | 'secondary' | 'ghost' | 'destructive'", "optional": true }, { "name": "label", "type": "string", "optional": true }], "maps": ["badge"], "usageCount": 35 },
+    { "name": "Button", "import": "@/components/ui/Button", "export": "named", "props": [{ "name": "children", "type": "ReactNode", "optional": true }, { "name": "pad", "type": "SpaceToken", "optional": true }, { "name": "radius", "type": "RadiusToken", "optional": true }, { "name": "variant", "type": "'primary' | 'secondary' | 'ghost' | 'destructive'", "optional": true }, { "name": "label", "type": "string", "optional": true }], "maps": ["button.primary", "button.secondary", "button.ghost", "button.destructive"], "usageCount": 80 },
+    { "name": "Card", "import": "@/components/ui/Card", "export": "named", "props": [{ "name": "children", "type": "ReactNode", "optional": true }, { "name": "pad", "type": "SpaceToken", "optional": true }, { "name": "radius", "type": "RadiusToken", "optional": true }, { "name": "variant", "type": "'primary' | 'secondary' | 'ghost' | 'destructive'", "optional": true }, { "name": "label", "type": "string", "optional": true }], "maps": ["container.card", "container.panel"], "usageCount": 50 },
+    { "name": "Checkbox", "import": "@/components/ui/Checkbox", "export": "named", "props": [{ "name": "checked", "type": "boolean", "optional": true }, { "name": "onChange", "type": "(checked: boolean) => void", "optional": true }, { "name": "label", "type": "string", "optional": true }, { "name": "disabled", "type": "boolean", "optional": true }], "maps": ["control.checkbox"], "usageCount": 20 },
+    { "name": "Divider", "import": "@/components/ui/Divider", "export": "named", "props": [{ "name": "orientation", "type": "'horizontal' | 'vertical'", "optional": true }, { "name": "color", "type": "string", "optional": true }], "maps": ["divider"], "usageCount": 40 },
+    { "name": "Icon", "import": "@/components/ui/Icon", "export": "named", "props": [{ "name": "name", "type": "string" }, { "name": "size", "type": "'sm' | 'md' | 'lg'", "optional": true }, { "name": "color", "type": "string", "optional": true }], "maps": ["icon"], "usageCount": 90 },
+    { "name": "Input", "import": "@/components/ui/Input", "export": "named", "props": [{ "name": "value", "type": "string", "optional": true }, { "name": "onChange", "type": "(value: string) => void", "optional": true }, { "name": "placeholder", "type": "string", "optional": true }, { "name": "label", "type": "string", "optional": true }, { "name": "type", "type": "'text' | 'password' | 'email' | 'number'", "optional": true }, { "name": "disabled", "type": "boolean", "optional": true }], "maps": ["input"], "usageCount": 100 },
+    { "name": "List", "import": "@/components/ui/List", "export": "named", "props": [{ "name": "children", "type": "ReactNode", "optional": true }, { "name": "ordered", "type": "boolean", "optional": true }], "maps": ["list"], "usageCount": 30 },
+    { "name": "Modal", "import": "@/components/ui/Modal", "export": "named", "props": [{ "name": "children", "type": "ReactNode", "optional": true }, { "name": "open", "type": "boolean", "optional": true }, { "name": "onClose", "type": "() => void", "optional": true }, { "name": "title", "type": "string", "optional": true }], "maps": ["container.sheet"], "usageCount": 15 },
+    { "name": "Radio", "import": "@/components/ui/Radio", "export": "named", "props": [{ "name": "value", "type": "string", "optional": true }, { "name": "checked", "type": "boolean", "optional": true }, { "name": "onChange", "type": "(value: string) => void", "optional": true }, { "name": "label", "type": "string", "optional": true }, { "name": "name", "type": "string", "optional": true }], "maps": ["control.radio"], "usageCount": 12 },
+    { "name": "Select", "import": "@/components/ui/Select", "export": "named", "props": [{ "name": "value", "type": "string", "optional": true }, { "name": "onChange", "type": "(value: string) => void", "optional": true }, { "name": "options", "type": "Array<{ label: string; value: string }>", "optional": true }, { "name": "label", "type": "string", "optional": true }, { "name": "disabled", "type": "boolean", "optional": true }], "maps": ["control.select"], "usageCount": 18 },
+    { "name": "Sheet", "import": "@/components/ui/Sheet", "export": "named", "props": [{ "name": "children", "type": "ReactNode", "optional": true }, { "name": "open", "type": "boolean", "optional": true }, { "name": "onClose", "type": "() => void", "optional": true }], "maps": ["container.sheet"], "usageCount": 10 },
+    { "name": "Slider", "import": "@/components/ui/Slider", "export": "named", "props": [{ "name": "value", "type": "number", "optional": true }, { "name": "onChange", "type": "(value: number) => void", "optional": true }, { "name": "min", "type": "number", "optional": true }, { "name": "max", "type": "number", "optional": true }, { "name": "step", "type": "number", "optional": true }, { "name": "label", "type": "string", "optional": true }], "maps": ["control.slider"], "usageCount": 22 },
+    { "name": "Switch", "import": "@/components/ui/Switch", "export": "named", "props": [{ "name": "checked", "type": "boolean", "optional": true }, { "name": "onChange", "type": "(checked: boolean) => void", "optional": true }, { "name": "disabled", "type": "boolean", "optional": true }, { "name": "label", "type": "string", "optional": true }], "maps": ["control.switch"], "usageCount": 30 },
+    { "name": "Text", "import": "@/components/ui/Text", "export": "named", "props": [{ "name": "children", "type": "ReactNode", "optional": true }, { "name": "size", "type": "'sm' | 'md' | 'lg'", "optional": true }, { "name": "weight", "type": "'normal' | 'bold'", "optional": true }], "maps": ["text"], "usageCount": 300 },
+    { "name": "Title", "import": "@/components/ui/Title", "export": "named", "props": [{ "name": "children", "type": "ReactNode", "optional": true }, { "name": "level", "type": "1 | 2 | 3 | 4", "optional": true }], "maps": ["heading"], "usageCount": 60 },
+    { "name": "SettingGroup", "import": "@/components/settings/Settinggroup", "export": "named", "props": [{ "name": "title", "type": "string", "optional": true }, { "name": "children", "type": "ReactNode", "optional": true }], "maps": ["container.plain"], "usageCount": 8 },
+    { "name": "SettingRow", "import": "@/components/settings/Settingrow", "export": "default", "props": [{ "name": "title", "type": "string", "optional": true }, { "name": "children", "type": "ReactNode", "optional": true }], "maps": ["row"], "usageCount": 147 }
+  ],
+  "tokens": {
+    "space": { "4": 4, "8": 8, "12": 12, "16": 16, "24": 24, "32": 32 },
+    "radius": { "sm": 4, "md": 8, "lg": 16, "full": 9999 },
+    "color": { "primary": "blue", "secondary": "gray", "destructive": "red" }
+  },
+  "conventions": {
+    "screenDir": "src/screens",
+    "fileCase": "PascalCase",
+    "ext": ".tsx",
+    "exportStyle": "named",
+    "styleSystem": "tokens-prop",
+    "importAlias": "@/"
+  }
+}
