@@ -1,0 +1,45 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "component",
+    "name": "ConfirmModal"
+  },
+  "nodes": [
+    {
+      "role": "container",
+      "variant": "sheet",
+      "conf": 0.9,
+      "children": [
+        {
+          "role": "heading",
+          "text": "Are you sure?",
+          "conf": 0.9
+        },
+        {
+          "role": "text",
+          "text": "This action cannot be undone.",
+          "conf": 0.9
+        },
+        {
+          "role": "row",
+          "conf": 0.9,
+          "children": [
+            {
+              "role": "button",
+              "variant": "ghost",
+              "text": "Cancel",
+              "conf": 0.9
+            },
+            {
+              "role": "button",
+              "variant": "destructive",
+              "text": "Delete",
+              "conf": 0.9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unresolved": []
+}

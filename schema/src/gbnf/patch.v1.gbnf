@@ -1,0 +1,15 @@
+# GBNF grammar compiled from https://snapforge.dev/schema/patch.v1.json
+# Generated: do not edit. Regenerate with: npm run gbnf
+# Every enum is closed. Invalid output is unreachable.
+
+root ::= "[" ws (flex-obj-3 ("," ws flex-obj-3)*)? ws "]"
+
+enum-0 ::= "\"add\"" | "\"remove\"" | "\"replace\"" | "\"move\"" | "\"copy\"" | "\"test\""
+char ::= [^"\\\x00-\x1f] | "\\" ["\\/bfnrt]
+string ::= "\"" char* "\""
+value ::= string | number | boolean | null
+opt-value-1 ::= "," ws "\"value\"" ":" ws value
+opt-from-2 ::= "," ws "\"from\"" ":" ws string
+flex-obj-3 ::= "{" ws "\"op\"" ":" ws enum-0 "," ws "\"path\"" ":" ws string (opt-value-1)? (opt-from-2)? ws "}"
+
+ws ::= [ \t\n]*

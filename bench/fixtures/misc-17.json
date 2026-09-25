@@ -1,0 +1,15 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "fragment",
+    "name": "Misc17"
+  },
+  "nodes": [
+    {
+      "role": "control",
+      "ctrl": "checkbox",
+      "conf": 0.9
+    }
+  ],
+  "unresolved": []
+}

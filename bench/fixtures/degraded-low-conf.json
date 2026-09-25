@@ -1,0 +1,21 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "screen",
+    "name": "LowConfScreen"
+  },
+  "nodes": [
+    {
+      "role": "heading",
+      "text": "Header",
+      "conf": 0.5
+    },
+    {
+      "role": "button",
+      "text": "Click",
+      "conf": 0.45,
+      "variant": "primary"
+    }
+  ],
+  "unresolved": []
+}

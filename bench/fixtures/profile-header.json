@@ -1,0 +1,37 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "component",
+    "name": "ProfileHeader"
+  },
+  "nodes": [
+    {
+      "role": "row",
+      "conf": 0.9,
+      "children": [
+        {
+          "role": "image",
+          "conf": 0.9,
+          "radius": "full"
+        },
+        {
+          "role": "column",
+          "conf": 0.9,
+          "children": [
+            {
+              "role": "heading",
+              "text": "Jane Doe",
+              "conf": 0.9
+            },
+            {
+              "role": "badge",
+              "text": "Admin",
+              "conf": 0.9
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "component",
+    "name": "UserList"
+  },
+  "nodes": [
+    {
+      "role": "list",
+      "conf": 0.9,
+      "children": [
+        {
+          "role": "row",
+          "label": "Alice",
+          "conf": 0.9
+        },
+        {
+          "role": "row",
+          "label": "Bob",
+          "conf": 0.9
+        }
+      ]
+    }
+  ],
+  "unresolved": []
+}

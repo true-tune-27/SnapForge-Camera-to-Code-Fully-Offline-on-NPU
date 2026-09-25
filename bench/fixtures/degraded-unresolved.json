@@ -1,0 +1,43 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "screen",
+    "name": "UnresolvedScreen"
+  },
+  "nodes": [
+    {
+      "role": "heading",
+      "text": "Header",
+      "conf": 0.9
+    }
+  ],
+  "unresolved": [
+    {
+      "bbox": [
+        0.1,
+        0.1,
+        0.2,
+        0.2
+      ],
+      "reason": "illegible_handwriting"
+    },
+    {
+      "bbox": [
+        0.3,
+        0.3,
+        0.4,
+        0.4
+      ],
+      "reason": "occluded"
+    },
+    {
+      "bbox": [
+        0.5,
+        0.5,
+        0.6,
+        0.6
+      ],
+      "reason": "low_confidence"
+    }
+  ]
+}

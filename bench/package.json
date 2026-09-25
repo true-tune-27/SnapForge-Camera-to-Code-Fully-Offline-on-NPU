@@ -5,14 +5,20 @@
   "description": "40-sketch benchmark set + scoring harness",
   "type": "module",
   "scripts": {
+    "test": "vitest run",
     "build": "tsc",
     "bench": "tsx src/run.ts",
     "accept": "tsx src/accept.ts",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "tsx": "^4.19.0",
+    "@snapforge/renderer": "*",
     "@snapforge/schema": "*",
-    "@snapforge/renderer": "*"
+    "@types/node": "^26.6.2",
+    "tsx": "^4.19.0"
+  },
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^2.1.1"
   }
 }

@@ -1,0 +1,50 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "component",
+    "name": "DeepNest"
+  },
+  "nodes": [
+    {
+      "role": "container",
+      "variant": "plain",
+      "conf": 0.9,
+      "children": [
+        {
+          "role": "container",
+          "variant": "plain",
+          "conf": 0.9,
+          "children": [
+            {
+              "role": "container",
+              "variant": "plain",
+              "conf": 0.9,
+              "children": [
+                {
+                  "role": "container",
+                  "variant": "plain",
+                  "conf": 0.9,
+                  "children": [
+                    {
+                      "role": "container",
+                      "variant": "plain",
+                      "conf": 0.9,
+                      "children": [
+                        {
+                          "role": "text",
+                          "text": "Deep",
+                          "conf": 0.9
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "unresolved": []
+}

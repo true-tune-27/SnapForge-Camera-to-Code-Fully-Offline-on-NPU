@@ -1,0 +1,31 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "component",
+    "name": "TabBar"
+  },
+  "nodes": [
+    {
+      "role": "row",
+      "conf": 0.9,
+      "children": [
+        {
+          "role": "icon",
+          "conf": 0.9,
+          "text": "home"
+        },
+        {
+          "role": "icon",
+          "conf": 0.9,
+          "text": "search"
+        },
+        {
+          "role": "icon",
+          "conf": 0.9,
+          "text": "settings"
+        }
+      ]
+    }
+  ],
+  "unresolved": []
+}

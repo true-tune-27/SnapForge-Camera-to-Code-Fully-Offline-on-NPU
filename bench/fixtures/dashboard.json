@@ -1,0 +1,52 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "screen",
+    "name": "Dashboard"
+  },
+  "nodes": [
+    {
+      "role": "heading",
+      "text": "Overview",
+      "conf": 0.95
+    },
+    {
+      "role": "container",
+      "variant": "plain",
+      "children": [
+        {
+          "role": "column",
+          "children": [
+            {
+              "role": "container",
+              "variant": "card",
+              "children": [
+                {
+                  "role": "text",
+                  "text": "Users",
+                  "conf": 0.9
+                }
+              ],
+              "conf": 0.9
+            },
+            {
+              "role": "container",
+              "variant": "card",
+              "children": [
+                {
+                  "role": "text",
+                  "text": "Sales",
+                  "conf": 0.9
+                }
+              ],
+              "conf": 0.9
+            }
+          ],
+          "conf": 0.9
+        }
+      ],
+      "conf": 0.9
+    }
+  ],
+  "unresolved": []
+}

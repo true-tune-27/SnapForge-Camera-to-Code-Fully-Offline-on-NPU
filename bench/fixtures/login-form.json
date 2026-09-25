@@ -1,0 +1,47 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "screen",
+    "name": "LoginScreen"
+  },
+  "nodes": [
+    {
+      "role": "image",
+      "conf": 0.8,
+      "bbox": [
+        0.4,
+        0.1,
+        0.6,
+        0.2
+      ]
+    },
+    {
+      "role": "heading",
+      "text": "Welcome back",
+      "conf": 0.95
+    },
+    {
+      "role": "input",
+      "label": "Email",
+      "conf": 0.9
+    },
+    {
+      "role": "input",
+      "label": "Password",
+      "conf": 0.9
+    },
+    {
+      "role": "button",
+      "variant": "primary",
+      "text": "Log in",
+      "conf": 0.99
+    },
+    {
+      "role": "button",
+      "variant": "ghost",
+      "text": "Forgot password?",
+      "conf": 0.85
+    }
+  ],
+  "unresolved": []
+}

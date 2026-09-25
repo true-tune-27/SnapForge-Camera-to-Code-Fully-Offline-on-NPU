@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://snapforge.dev/schema/layout.v1.json",
+  "title": "SnapForge Layout v1",
+  "description": "The document the vision model emits under grammar constraint. ~280 tokens for a typical screen. Every enum is closed — open strings cannot be grammar-constrained.",
+  "type": "object",
+  "required": ["schema", "surface", "nodes", "unresolved"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "snapforge.layout/v1"
+    },
+    "surface": {
+      "$ref": "#/$defs/Surface"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Node"
+      },
+      "minItems": 1
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Unresolved"
+      }
+    }
+  },
+  "$defs": {
+    "Surface": {
+      "type": "object",
+      "required": ["kind", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": ["screen", "component", "fragment"]
+        },
+        "name": {
+          "type": "string",
+          "pattern": "^[A-Z][a-zA-Z0-9]*$",
+          "maxLength": 60,
+          "description": "PascalCase identifier for the generated component"
+        }
+      }
+    },
+    "BBox": {
+      "type": "array",
+      "description": "[x0, y0, x1, y1] normalised to the rectified board, each 0..1 inclusive",
+      "items": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "Role": {
+      "description": "CLOSED enum of node roles. The grammar depends on this being closed.",
+      "enum": [
+        "heading",
+        "text",
+        "container",
+        "row",
+        "column",
+        "button",
+        "input",
+        "image",
+        "list",
+        "divider",
+        "icon",
+        "badge",
+        "control"
+      ]
+    },
+    "ContainerVariant": {
+      "enum": ["card", "panel", "sheet", "plain"]
+    },
+    "ButtonVariant": {
+      "enum": ["primary", "secondary", "ghost", "destructive"]
+    },
+    "ControlVariant": {
+      "enum": ["switch", "slider", "checkbox", "radio", "select"]
+    },
+    "Variant": {
+      "description": "Closed union of all per-role variants. Per-role validation is enforced via if/then.",
+      "enum": [
+        "card", "panel", "sheet", "plain",
+        "primary", "secondary", "ghost", "destructive",
+        "switch", "slider", "checkbox", "radio", "select"
+      ]
+    },
+    "Radius": {
+      "enum": ["none", "sm", "md", "lg", "full"]
+    },
+    "State": {
+      "enum": ["on", "off", "indeterminate"]
+    },
+    "ControlType": {
+      "description": "Inline control type for row nodes. Avoids a child node, saving ~15 tokens per row control.",
+      "enum": ["switch", "slider", "checkbox", "radio", "select"]
+    },
+    "UnresolvedReason": {
+      "enum": [
+        "illegible_handwriting",
+        "ambiguous_shape",
+        "occluded",
+        "out_of_frame",
+        "low_confidence"
+      ]
+    },
+    "Node": {
+      "type": "object",
+      "required": ["role", "conf"],
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "$ref": "#/$defs/Role"
+        },
+        "variant": {
+          "$ref": "#/$defs/Variant"
+        },
+        "bbox": {
+          "$ref": "#/$defs/BBox"
+        },
+        "conf": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Model confidence for this node, 0..1"
+        },
+        "pad": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Padding relative to board width. Measurement, not a token — token snapping happens in the renderer."
+        },
+        "gap": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Gap between children, relative to board width."
+        },
+        "radius": {
+          "$ref": "#/$defs/Radius"
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "Text content of the node"
+        },
+        "label": {
+          "type": "string",
+          "maxLength": 120,
+          "description": "Label for the node (e.g., for rows, inputs)"
+        },
+        "state": {
+          "$ref": "#/$defs/State"
+        },
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Numeric value for controls (slider position, etc.)"
+        },
+        "ctrl": {
+          "$ref": "#/$defs/ControlType"
+        },
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Node"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "role": { "const": "container" } },
+            "required": ["role"]
+          },
+          "then": {
+            "properties": {
+              "variant": { "$ref": "#/$defs/ContainerVariant" }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "role": { "const": "button" } },
+            "required": ["role"]
+          },
+          "then": {
+            "properties": {
+              "variant": { "$ref": "#/$defs/ButtonVariant" }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": { "role": { "const": "control" } },
+            "required": ["role"]
+          },
+          "then": {
+            "properties": {
+              "variant": { "$ref": "#/$defs/ControlVariant" }
+            }
+          }
+        }
+      ]
+    },
+    "Unresolved": {
+      "type": "object",
+      "required": ["bbox", "reason"],
+      "additionalProperties": false,
+      "properties": {
+        "bbox": {
+          "$ref": "#/$defs/BBox"
+        },
+        "reason": {
+          "$ref": "#/$defs/UnresolvedReason"
+        }
+      }
+    }
+  }
+}

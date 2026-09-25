@@ -13,11 +13,18 @@
     "forge": "tsx src/cli.ts"
   },
   "dependencies": {
+    "ajv": "^6.15.0",
+    "ajv-formats": "^3.0.1",
+    "fast-json-patch": "^3.1.1",
     "typescript": "~5.6.0"
   },
   "devDependencies": {
-    "vitest": "^2.0.0",
+    "@snapforge/schema": "*",
+    "@typescript-eslint/eslint-plugin": "^8.70.0",
+    "@typescript-eslint/parser": "^8.70.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.5",
     "tsx": "^4.19.0",
-    "@snapforge/schema": "*"
+    "vitest": "^2.0.0"
   }
 }

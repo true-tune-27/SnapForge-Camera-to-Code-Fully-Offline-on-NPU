@@ -1,0 +1,26 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "component",
+    "name": "ValidationForm"
+  },
+  "nodes": [
+    {
+      "role": "input",
+      "label": "Username",
+      "conf": 0.9
+    },
+    {
+      "role": "text",
+      "text": "Username is taken",
+      "conf": 0.9
+    },
+    {
+      "role": "button",
+      "variant": "primary",
+      "text": "Submit",
+      "conf": 0.9
+    }
+  ],
+  "unresolved": []
+}

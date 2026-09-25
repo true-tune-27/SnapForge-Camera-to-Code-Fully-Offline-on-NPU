@@ -1,0 +1,73 @@
+{
+  "schema": "snapforge.layout/v1",
+  "surface": {
+    "kind": "screen",
+    "name": "DashboardScreen"
+  },
+  "nodes": [
+    {
+      "role": "heading",
+      "text": "Welcome, User!",
+      "conf": 0.95
+    },
+    {
+      "role": "input",
+      "label": "Search",
+      "conf": 0.8
+    },
+    {
+      "role": "container.card",
+      "conf": 0.9,
+      "children": [
+        {
+          "role": "heading",
+          "text": "PERFORMANCE OVERVIEW",
+          "conf": 0.95
+        },
+        {
+          "role": "image",
+          "conf": 0.85,
+          "bbox": [0.1, 0.2, 0.9, 0.5]
+        }
+      ]
+    },
+    {
+      "role": "container.card",
+      "conf": 0.9,
+      "children": [
+        {
+          "role": "heading",
+          "text": "TRAFFIC SOURCES",
+          "conf": 0.95
+        },
+        {
+          "role": "image",
+          "conf": 0.85,
+          "bbox": [0.1, 0.6, 0.45, 0.9]
+        }
+      ]
+    },
+    {
+      "role": "container.card",
+      "conf": 0.9,
+      "children": [
+        {
+          "role": "heading",
+          "text": "KEY STATS",
+          "conf": 0.95
+        },
+        {
+          "role": "heading",
+          "text": "12,450",
+          "conf": 0.98
+        },
+        {
+          "role": "text",
+          "text": "Visitors",
+          "conf": 0.9
+        }
+      ]
+    }
+  ],
+  "unresolved": []
+}

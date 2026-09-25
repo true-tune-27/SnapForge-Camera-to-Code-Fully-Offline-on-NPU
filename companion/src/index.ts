@@ -1,4 +1,4 @@
-// Companion entry point — placeholder until Phase 3
-// This module will export: indexRepo, watchRepo, createTransport, createLandingService
-
-export {}
+export { indexComponents as indexRepo } from './index/components.js'
+export { watchRepo } from './watcher.js'
+export { landPayload } from './landing/index.js'
+export * from './transport/index.js'

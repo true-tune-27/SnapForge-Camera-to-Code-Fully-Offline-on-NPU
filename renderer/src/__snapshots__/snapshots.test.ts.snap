@@ -1,0 +1,485 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for dashboard.json 1`] = `
+"// forged by SnapForge · layout e08aee
+import React from "react";
+import { SettingGroup } from "@/components/settings/Settinggroup";
+import { Card } from "@/components/ui/Card";
+import { Text } from "@/components/ui/Text";
+import { Title } from "@/components/ui/Title";
+export const Dashboard = () => {
+    return <><Title>Overview</Title><SettingGroup><div><Card variant="card"><Text>Users</Text></Card><Card variant="card"><Text>Sales</Text></Card></div> /* TODO(snapforge): no component matched column — closest: Button, Icon, Input */
+    </SettingGroup></>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for degraded-low-conf.json 1`] = `
+"// forged by SnapForge · layout b8b421
+import React from "react";
+import { Button } from "@/components/ui/Button";
+import { Title } from "@/components/ui/Title";
+export const LowConfScreen = () => {
+    return <><Title>Header</Title><Button label="Click" variant="primary"/></>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for degraded-nested.json 1`] = `
+"// forged by SnapForge · layout 9e2feb
+import React from "react";
+import { SettingGroup } from "@/components/settings/Settinggroup";
+import { Text } from "@/components/ui/Text";
+export const DeepNest = () => {
+    return <SettingGroup><SettingGroup><SettingGroup><SettingGroup><SettingGroup><Text>Deep</Text></SettingGroup></SettingGroup></SettingGroup></SettingGroup></SettingGroup>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for degraded-unmatched.json 1`] = `
+"// forged by SnapForge · layout a48039
+import React from "react";
+import { Button } from "@/components/ui/Button";
+export const Unmatched = () => {
+    return <Button variant="destructive"/>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for degraded-unresolved.json 1`] = `
+"// forged by SnapForge · layout 3403a0
+import React from "react";
+import { Title } from "@/components/ui/Title";
+export const UnresolvedScreen = () => {
+    return <><Title>Header</Title> /* TODO(snapforge): illegible_handwriting at bbox [0.10, 0.10, 0.20, 0.20] */
+    /* TODO(snapforge): occluded at bbox [0.30, 0.30, 0.40, 0.40] */
+    /* TODO(snapforge): low_confidence at bbox [0.50, 0.50, 0.60, 0.60] */
+    </>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for empty-state.json 1`] = `
+"// forged by SnapForge · layout 72e505
+import React from "react";
+import { Icon } from "@/components/ui/Icon";
+import { Text } from "@/components/ui/Text";
+import { Title } from "@/components/ui/Title";
+export const EmptyState = () => {
+    return <div><Title>No messages</Title><Icon /> /* dropped fields: text */
+    <Text>Check back later</Text></div> /* TODO(snapforge): no component matched column — closest: Button, Icon, Input */
+    ;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for list.json 1`] = `
+"// forged by SnapForge · layout d2842f
+import React from "react";
+import SettingRow from "@/components/settings/Settingrow";
+import { List } from "@/components/ui/List";
+export const UserList = () => {
+    return <List><SettingRow>Alice</SettingRow><SettingRow>Bob</SettingRow></List>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for login-form.json 1`] = `
+"// forged by SnapForge · layout ecfbfc
+import React from "react";
+import Avatar from "@/components/ui/Avatar";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Title } from "@/components/ui/Title";
+export const LoginScreen = () => {
+    return <><Button label="Log in" variant="primary"/><Title>Welcome back</Title><Input label="Email"/><Input label="Password"/><Button label="Forgot password?" variant="ghost"/><Avatar /></>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for misc-15.json 1`] = `
+"// forged by SnapForge · layout 2af667
+import React from "react";
+export const Misc15 = () => {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Button, Icon, SettingRow */
+    ;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for misc-16.json 1`] = `
+"// forged by SnapForge · layout a8ee65
+import React from "react";
+export const Misc16 = () => {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Button, Icon, SettingRow */
+    ;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for misc-17.json 1`] = `
+"// forged by SnapForge · layout e4117d
+import React from "react";
+export const Misc17 = () => {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Button, Icon, SettingRow */
+    ;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for misc-18.json 1`] = `
+"// forged by SnapForge · layout cb3a31
+import React from "react";
+export const Misc18 = () => {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Button, Icon, SettingRow */
+    ;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for misc-19.json 1`] = `
+"// forged by SnapForge · layout e82534
+import React from "react";
+export const Misc19 = () => {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Button, Icon, SettingRow */
+    ;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for misc-20.json 1`] = `
+"// forged by SnapForge · layout 250f08
+import React from "react";
+export const Misc20 = () => {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Button, Icon, SettingRow */
+    ;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for modal.json 1`] = `
+"// forged by SnapForge · layout f10fe3
+import React from "react";
+import SettingRow from "@/components/settings/Settingrow";
+import { Button } from "@/components/ui/Button";
+import { Modal } from "@/components/ui/Modal";
+import { Text } from "@/components/ui/Text";
+import { Title } from "@/components/ui/Title";
+export const ConfirmModal = () => {
+    return <Modal><Title>Are you sure?</Title><SettingRow><Button label="Cancel" variant="ghost"/><Button label="Delete" variant="destructive"/></SettingRow><Text>This action cannot be undone.</Text></Modal>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for nav-drawer.json 1`] = `
+"// forged by SnapForge · layout 6b2046
+import React from "react";
+import SettingRow from "@/components/settings/Settingrow";
+import { Card } from "@/components/ui/Card";
+import { Divider } from "@/components/ui/Divider";
+import { List } from "@/components/ui/List";
+export const NavDrawer = () => {
+    return <Card variant="panel"><List><Divider /><SettingRow>Inbox</SettingRow><SettingRow>Outbox</SettingRow><SettingRow>Spam</SettingRow></List></Card>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for profile-header.json 1`] = `
+"// forged by SnapForge · layout d9da50
+import React from "react";
+import SettingRow from "@/components/settings/Settingrow";
+import Avatar from "@/components/ui/Avatar";
+import { Badge } from "@/components/ui/Badge";
+import { Title } from "@/components/ui/Title";
+export const ProfileHeader = () => {
+    return <SettingRow><div><Badge label="Admin"/><Title>Jane Doe</Title></div> /* TODO(snapforge): no component matched column — closest: Button, Icon, Input */
+    <Avatar radius="full"/></SettingRow>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for settings-screen.json 1`] = `
+"// forged by SnapForge · layout 7bb0e3
+import React from "react";
+import SettingRow from "@/components/settings/Settingrow";
+import { Button } from "@/components/ui/Button";
+import { Card } from "@/components/ui/Card";
+import { Title } from "@/components/ui/Title";
+export const SettingsScreen = () => {
+    return <><Title>Settings</Title> /* TODO(snapforge): illegible_handwriting at bbox [0.70, 0.04, 0.93, 0.12] */
+    <Card variant="card" pad="16" radius="lg"><SettingRow>Push notifications</SettingRow> /* dropped fields: state */
+    <SettingRow>Volume</SettingRow> /* dropped fields: value */
+    </Card><Button label="Save changes" variant="primary"/></>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for tab-bar.json 1`] = `
+"// forged by SnapForge · layout 2b640c
+import React from "react";
+import SettingRow from "@/components/settings/Settingrow";
+import { Icon } from "@/components/ui/Icon";
+export const TabBar = () => {
+    return <SettingRow><Icon /> /* dropped fields: text */
+    <Icon /> /* dropped fields: text */
+    <Icon /> /* dropped fields: text */
+    </SettingRow>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > acme-web snapshots > matches snapshot for validation-form.json 1`] = `
+"// forged by SnapForge · layout 5115d3
+import React from "react";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Text } from "@/components/ui/Text";
+export const ValidationForm = () => {
+    return <><Button label="Submit" variant="primary"/><Input label="Username"/><Text>Username is taken</Text></>;
+};
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for dashboard.json 1`] = `
+"// forged by SnapForge · layout e08aee
+import React from "react";
+import Box from "~/components/Box";
+import Txt from "~/components/Txt";
+export default function Dashboard() {
+    return <><Txt>Overview</Txt><div><div><Box><Txt>Users</Txt></Box><Box><Txt>Sales</Txt></Box></div> /* TODO(snapforge): no component matched column — closest: Box, Btn, Txt */
+    </div> /* TODO(snapforge): no component matched container.plain — closest: Box, Btn, Txt */
+    </>;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for degraded-low-conf.json 1`] = `
+"// forged by SnapForge · layout b8b421
+import React from "react";
+import Btn from "~/components/Btn";
+import Txt from "~/components/Txt";
+export default function LowConfScreen() {
+    return <><Txt>Header</Txt><Btn>Click</Btn></>;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for degraded-nested.json 1`] = `
+"// forged by SnapForge · layout 9e2feb
+import React from "react";
+import Txt from "~/components/Txt";
+export default function DeepNest() {
+    return <div><div><div><div><div><Txt>Deep</Txt></div> /* TODO(snapforge): no component matched container.plain — closest: Box, Btn, Txt */
+    </div> /* TODO(snapforge): no component matched container.plain — closest: Box, Btn, Txt */
+    </div> /* TODO(snapforge): no component matched container.plain — closest: Box, Btn, Txt */
+    </div> /* TODO(snapforge): no component matched container.plain — closest: Box, Btn, Txt */
+    </div> /* TODO(snapforge): no component matched container.plain — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for degraded-unmatched.json 1`] = `
+"// forged by SnapForge · layout a48039
+import React from "react";
+export default function Unmatched() {
+    return <button /> /* TODO(snapforge): no component matched button.destructive — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for degraded-unresolved.json 1`] = `
+"// forged by SnapForge · layout 3403a0
+import React from "react";
+import Txt from "~/components/Txt";
+export default function UnresolvedScreen() {
+    return <><Txt>Header</Txt> /* TODO(snapforge): illegible_handwriting at bbox [0.10, 0.10, 0.20, 0.20] */
+    /* TODO(snapforge): occluded at bbox [0.30, 0.30, 0.40, 0.40] */
+    /* TODO(snapforge): low_confidence at bbox [0.50, 0.50, 0.60, 0.60] */
+    </>;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for empty-state.json 1`] = `
+"// forged by SnapForge · layout 72e505
+import React from "react";
+import Txt from "~/components/Txt";
+export default function EmptyState() {
+    return <div><Txt>No messages</Txt><span /> /* TODO(snapforge): no component matched icon — closest: Box, Btn, Txt */
+    <Txt>Check back later</Txt></div> /* TODO(snapforge): no component matched column — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for list.json 1`] = `
+"// forged by SnapForge · layout d2842f
+import React from "react";
+export default function UserList() {
+    return <ul><div /> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    <div /> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    </ul> /* TODO(snapforge): no component matched list — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for login-form.json 1`] = `
+"// forged by SnapForge · layout ecfbfc
+import React from "react";
+import Btn from "~/components/Btn";
+import Txt from "~/components/Txt";
+export default function LoginScreen() {
+    return <><Btn>Log in</Btn><Txt>Welcome back</Txt><input /> /* TODO(snapforge): no component matched input — closest: Box, Btn, Txt */
+    <input /> /* TODO(snapforge): no component matched input — closest: Box, Btn, Txt */
+    <button /> /* TODO(snapforge): no component matched button.ghost — closest: Box, Btn, Txt */
+    <img /> /* TODO(snapforge): no component matched image — closest: Box, Btn, Txt */
+    </>;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for misc-15.json 1`] = `
+"// forged by SnapForge · layout 2af667
+import React from "react";
+export default function Misc15() {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for misc-16.json 1`] = `
+"// forged by SnapForge · layout a8ee65
+import React from "react";
+export default function Misc16() {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for misc-17.json 1`] = `
+"// forged by SnapForge · layout e4117d
+import React from "react";
+export default function Misc17() {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for misc-18.json 1`] = `
+"// forged by SnapForge · layout cb3a31
+import React from "react";
+export default function Misc18() {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for misc-19.json 1`] = `
+"// forged by SnapForge · layout e82534
+import React from "react";
+export default function Misc19() {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for misc-20.json 1`] = `
+"// forged by SnapForge · layout 250f08
+import React from "react";
+export default function Misc20() {
+    return <div /> /* TODO(snapforge): no component matched control — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for modal.json 1`] = `
+"// forged by SnapForge · layout f10fe3
+import React from "react";
+import Txt from "~/components/Txt";
+export default function ConfirmModal() {
+    return <div><Txt>Are you sure?</Txt><div><button /> /* TODO(snapforge): no component matched button.ghost — closest: Box, Btn, Txt */
+    <button /> /* TODO(snapforge): no component matched button.destructive — closest: Box, Btn, Txt */
+    </div> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    <Txt>This action cannot be undone.</Txt></div> /* TODO(snapforge): no component matched container.sheet — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for nav-drawer.json 1`] = `
+"// forged by SnapForge · layout 6b2046
+import React from "react";
+import Box from "~/components/Box";
+export default function NavDrawer() {
+    return <Box><ul><hr /> /* TODO(snapforge): no component matched divider — closest: Box, Btn, Txt */
+    <div /> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    <div /> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    <div /> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    </ul> /* TODO(snapforge): no component matched list — closest: Box, Btn, Txt */
+    </Box>;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for profile-header.json 1`] = `
+"// forged by SnapForge · layout d9da50
+import React from "react";
+import Txt from "~/components/Txt";
+export default function ProfileHeader() {
+    return <div><div><span /> /* TODO(snapforge): no component matched badge — closest: Box, Btn, Txt */
+    <Txt>Jane Doe</Txt></div> /* TODO(snapforge): no component matched column — closest: Box, Btn, Txt */
+    <img radius="base"/> /* TODO(snapforge): no component matched image — closest: Box, Btn, Txt */
+    </div> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for settings-screen.json 1`] = `
+"// forged by SnapForge · layout 7bb0e3
+import React from "react";
+import Box from "~/components/Box";
+import Btn from "~/components/Btn";
+import Txt from "~/components/Txt";
+export default function SettingsScreen() {
+    return <><Txt>Settings</Txt> /* TODO(snapforge): illegible_handwriting at bbox [0.70, 0.04, 0.93, 0.12] */
+    <Box pad="md" radius="base"><div /> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    <div /> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    </Box><Btn>Save changes</Btn></>;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for tab-bar.json 1`] = `
+"// forged by SnapForge · layout 2b640c
+import React from "react";
+export default function TabBar() {
+    return <div><span /> /* TODO(snapforge): no component matched icon — closest: Box, Btn, Txt */
+    <span /> /* TODO(snapforge): no component matched icon — closest: Box, Btn, Txt */
+    <span /> /* TODO(snapforge): no component matched icon — closest: Box, Btn, Txt */
+    </div> /* TODO(snapforge): no component matched row — closest: Box, Btn, Txt */
+    ;
+}
+"
+`;
+
+exports[`Snapshot Suite & Determinism Gate > minimal-web snapshots > matches snapshot for validation-form.json 1`] = `
+"// forged by SnapForge · layout 5115d3
+import React from "react";
+import Btn from "~/components/Btn";
+import Txt from "~/components/Txt";
+export default function ValidationForm() {
+    return <><Btn>Submit</Btn><input /> /* TODO(snapforge): no component matched input — closest: Box, Btn, Txt */
+    <Txt>Username is taken</Txt></>;
+}
+"
+`;

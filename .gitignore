@@ -6,11 +6,14 @@ dist/
 build/
 *.tsbuildinfo
 
-# Model binaries
+# Model weights & binaries (too large for git — 7+ GB)
+models/weights/
 *.bin
 *.onnx
+*.onnx.data
 *.tflite
 *.so
+*.safetensors
 
 # Local index files
 index.sfx
@@ -35,8 +38,26 @@ coverage/
 # Temporary
 tmp/
 temp/
+scratch/
 
-# Build pack and dossier (reference only)
+# Build pack and dossier (reference only, too large)
 BUILD-PACK.md
 dossier_extracted.md
 *.pdf
+
+# Android build caches
+android/.gradle/
+android/.kotlin/
+android/build/
+android/app/build/
+android/app/.cxx/
+android/local.properties
+android/.idea/
+
+# Native build outputs
+native/build/
+native/OpenCV-android-sdk/
+
+# Bench results (generated)
+bench/results/
+bench/repos/
