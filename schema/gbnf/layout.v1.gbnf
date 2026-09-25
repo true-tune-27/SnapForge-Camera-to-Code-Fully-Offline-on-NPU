@@ -1,0 +1,49 @@
+# GBNF grammar compiled from https://snapforge.dev/schema/layout.v1.json
+# Generated: do not edit. Regenerate with: npm run gbnf
+# Every enum is closed. Invalid output is unreachable.
+
+root ::= "{" ws "\"schema\"" ":" ws const-0 "," ws "\"surface\"" ":" ws surface "," ws "\"nodes\"" ":" ws arr-25 "," ws "\"unresolved\"" ":" ws arr-28 ws "}"
+
+const-0 ::= "\"snapforge.layout/v1\""
+surface ::= "{" ws "\"kind\"" ":" ws enum-1 "," ws "\"name\"" ":" ws bounded-str-2 ws "}"
+enum-1 ::= "\"screen\"" | "\"component\"" | "\"fragment\""
+char ::= [^"\\\x00-\x1f] | "\\" ["\\/bfnrt]
+bounded-str-2 ::= "\"" (char){0,60} "\""
+obj-3 ::= "{" ws "\"kind\"" ":" ws enum-1 "," ws "\"name\"" ":" ws bounded-str-2 ws "}"
+node ::= "{" ws "\"role\"" ":" ws role "," ws "\"conf\"" ":" ws num01 (opt-variant-6)? (opt-bbox-8)? (opt-pad-9)? (opt-gap-10)? (opt-radius-12)? (opt-text-14)? (opt-label-16)? (opt-state-18)? (opt-value-19)? (opt-ctrl-21)? (opt-children-23)? ws "}"
+role ::= "\"heading\"" | "\"text\"" | "\"container\"" | "\"row\"" | "\"column\"" | "\"button\"" | "\"input\"" | "\"image\"" | "\"list\"" | "\"divider\"" | "\"icon\"" | "\"badge\"" | "\"control\""
+enum-4 ::= "\"heading\"" | "\"text\"" | "\"container\"" | "\"row\"" | "\"column\"" | "\"button\"" | "\"input\"" | "\"image\"" | "\"list\"" | "\"divider\"" | "\"icon\"" | "\"badge\"" | "\"control\""
+num01 ::= "0" | "1" | "0." [0-9] [0-9]? [0-9]?
+variant ::= "\"card\"" | "\"panel\"" | "\"sheet\"" | "\"plain\"" | "\"primary\"" | "\"secondary\"" | "\"ghost\"" | "\"destructive\"" | "\"switch\"" | "\"slider\"" | "\"checkbox\"" | "\"radio\"" | "\"select\""
+enum-5 ::= "\"card\"" | "\"panel\"" | "\"sheet\"" | "\"plain\"" | "\"primary\"" | "\"secondary\"" | "\"ghost\"" | "\"destructive\"" | "\"switch\"" | "\"slider\"" | "\"checkbox\"" | "\"radio\"" | "\"select\""
+opt-variant-6 ::= "," ws "\"variant\"" ":" ws variant
+bbox ::= "[" ws num01 "," ws num01 "," ws num01 "," ws num01 ws "]"
+fixed-arr-7 ::= "[" ws num01 "," ws num01 "," ws num01 "," ws num01 ws "]"
+opt-bbox-8 ::= "," ws "\"bbox\"" ":" ws bbox
+opt-pad-9 ::= "," ws "\"pad\"" ":" ws num01
+opt-gap-10 ::= "," ws "\"gap\"" ":" ws num01
+radius ::= "\"none\"" | "\"sm\"" | "\"md\"" | "\"lg\"" | "\"full\""
+enum-11 ::= "\"none\"" | "\"sm\"" | "\"md\"" | "\"lg\"" | "\"full\""
+opt-radius-12 ::= "," ws "\"radius\"" ":" ws radius
+bounded-str-13 ::= "\"" (char){0,120} "\""
+opt-text-14 ::= "," ws "\"text\"" ":" ws bounded-str-13
+bounded-str-15 ::= "\"" (char){0,120} "\""
+opt-label-16 ::= "," ws "\"label\"" ":" ws bounded-str-15
+state ::= "\"on\"" | "\"off\"" | "\"indeterminate\""
+enum-17 ::= "\"on\"" | "\"off\"" | "\"indeterminate\""
+opt-state-18 ::= "," ws "\"state\"" ":" ws state
+opt-value-19 ::= "," ws "\"value\"" ":" ws num01
+controltype ::= "\"switch\"" | "\"slider\"" | "\"checkbox\"" | "\"radio\"" | "\"select\""
+enum-20 ::= "\"switch\"" | "\"slider\"" | "\"checkbox\"" | "\"radio\"" | "\"select\""
+opt-ctrl-21 ::= "," ws "\"ctrl\"" ":" ws controltype
+arr-22 ::= "[" ws (node ("," ws node)*)? ws "]"
+opt-children-23 ::= "," ws "\"children\"" ":" ws arr-22
+flex-obj-24 ::= "{" ws "\"role\"" ":" ws role "," ws "\"conf\"" ":" ws num01 (opt-variant-6)? (opt-bbox-8)? (opt-pad-9)? (opt-gap-10)? (opt-radius-12)? (opt-text-14)? (opt-label-16)? (opt-state-18)? (opt-value-19)? (opt-ctrl-21)? (opt-children-23)? ws "}"
+arr-25 ::= "[" ws node ("," ws node)* ws "]"
+unresolved ::= "{" ws "\"bbox\"" ":" ws bbox "," ws "\"reason\"" ":" ws unresolvedreason ws "}"
+unresolvedreason ::= "\"illegible_handwriting\"" | "\"ambiguous_shape\"" | "\"occluded\"" | "\"out_of_frame\"" | "\"low_confidence\""
+enum-26 ::= "\"illegible_handwriting\"" | "\"ambiguous_shape\"" | "\"occluded\"" | "\"out_of_frame\"" | "\"low_confidence\""
+obj-27 ::= "{" ws "\"bbox\"" ":" ws bbox "," ws "\"reason\"" ":" ws unresolvedreason ws "}"
+arr-28 ::= "[" ws (unresolved ("," ws unresolved)*)? ws "]"
+
+ws ::= [ \t\n]*

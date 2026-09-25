@@ -354,19 +354,14 @@ export function compileToGbnf(schema: JsonSchema): string {
 
 function main() {
   const args = process.argv.slice(2)
-  if (args.length === 0) {
-    // eslint-disable-next-line no-console
-    console.error('Usage: npm run gbnf -- <schema.json>')
-    process.exit(1)
-  }
-
-  const schemaPath = resolve(args[0])
+  const schemaFile = args.length > 0 ? args[0] : 'layout.v1.schema.json'
+  const schemaPath = resolve(schemaFile)
   const schema = JSON.parse(readFileSync(schemaPath, 'utf-8')) as JsonSchema
 
   const gbnf = compileToGbnf(schema)
 
   const outName = basename(schemaPath, '.schema.json') + '.gbnf'
-  const outDir = resolve(__dirname, '..', 'gbnf')
+  const outDir = resolve(__dirname, '..', '..', 'gbnf')
   const outPath = resolve(outDir, outName)
 
   mkdirSync(outDir, { recursive: true })
