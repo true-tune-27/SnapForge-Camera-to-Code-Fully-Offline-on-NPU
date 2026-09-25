@@ -20,7 +20,7 @@ describe('Landing Service', () => {
     
     // 2. Copy minimal-web to temp dir
     const sourceDir = path.resolve(__dirname, '..', '..', 'bench', 'repos', 'minimal-web')
-    await execAsync(`xcopy "${sourceDir}" "${tempRepoPath}" /E /I /Q /Y`)
+    await fs.cp(sourceDir, tempRepoPath, { recursive: true })
     
     // 3. Initialize git and commit
     await execAsync(`git init`, { cwd: tempRepoPath })
