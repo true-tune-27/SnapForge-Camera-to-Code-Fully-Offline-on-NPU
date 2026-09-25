@@ -1,15 +1,15 @@
 import { describe, it, expect } from 'vitest'
 import { emitTsx } from './emit.js'
 import type { DesignSystemIndex, Layout } from '@snapforge/schema'
-import { readFileSync, readdirSync, writeFileSync, mkdtempSync, cpSync, rmSync } from 'node:fs'
-import { resolve as pathResolve, dirname, join } from 'node:path'
+import { readFileSync, readdirSync } from 'node:fs'
+import { resolve as pathResolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { execSync } from 'node:child_process'
-import os from 'node:os'
+// import { execSync } from 'node:child_process'
+// import os from 'node:os'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const fixturesDir = pathResolve(__dirname, '..', '..', 'bench', 'fixtures')
-const acmeRepo = pathResolve(__dirname, '..', '..', 'bench', 'repos', 'acme-web')
+const _acmeRepo = pathResolve(__dirname, '..', '..', 'bench', 'repos', 'acme-web')
 
 // Same ACME_INDEX used across all renderer tests
 const ACME_INDEX: DesignSystemIndex = {

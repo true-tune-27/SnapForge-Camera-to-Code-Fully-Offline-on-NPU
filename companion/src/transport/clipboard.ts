@@ -55,7 +55,7 @@ export class ClipboardTransport implements Transport {
     }
   }
 
-  async sendIndex(index: Buffer): Promise<void> {
+  async sendIndex(_index: Buffer): Promise<void> {
     // In the Office Kit flow, the index is pre-bundled in the Android app for demo stability
     // No-op for this hackathon scaffold
   }
@@ -64,7 +64,7 @@ export class ClipboardTransport implements Transport {
     this.forgeCallbacks.push(cb)
   }
 
-  async mirrorPreview(stream: ReadableStream): Promise<void> {
+  async mirrorPreview(_stream: ReadableStream): Promise<void> {
     // Handled natively by Office Kit Screen Mirroring
   }
 

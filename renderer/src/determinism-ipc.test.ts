@@ -3,7 +3,7 @@ import { emitTsx } from './emit'
 import { readFileSync, writeFileSync, unlinkSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { createRequire } from 'node:module'
+// import { createRequire } from 'node:module'
 import { execFileSync } from 'node:child_process'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -11,7 +11,7 @@ const fixturesDir = resolve(__dirname, '..', '..', 'bench', 'fixtures')
 const acmeIndexFile = resolve(__dirname, '..', '..', 'bench', 'repos', 'acme-web', 'index.sfx')
 
 // This script will be invoked by node to run the emit in a separate process
-const scriptPath = resolve(__dirname, '..', 'dist', 'cli.js')
+const _scriptPath = resolve(__dirname, '..', 'dist', 'cli.js')
 
 describe('Cross-Process Determinism', () => {
   it('produces identical byte output across different V8 isolates', () => {

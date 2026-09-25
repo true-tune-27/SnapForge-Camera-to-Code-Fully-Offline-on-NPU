@@ -131,7 +131,7 @@ export function emitTsx(layout: Layout, index: DesignSystemIndex): string {
     }
 
     // Children processing
-    let jsxChildren: ts.JsxChild[] = []
+    const jsxChildren: ts.JsxChild[] = []
 
     // If node has its own children
     const childNodes = node.children || []
@@ -336,7 +336,7 @@ export function emitTsx(layout: Layout, index: DesignSystemIndex): string {
   // Function generation
   const componentName = layout.surface.name
   
-  let exportMod: ts.Modifier[] = [ts.factory.createModifier(ts.SyntaxKind.ExportKeyword)]
+  const exportMod: ts.Modifier[] = [ts.factory.createModifier(ts.SyntaxKind.ExportKeyword)]
   let statement: ts.Statement
 
   if (index.conventions.exportStyle === 'default') {

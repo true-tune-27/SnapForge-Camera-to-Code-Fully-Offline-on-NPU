@@ -94,7 +94,7 @@ describe('Voice Edit Patch Applier', () => {
   it('rejects patches with more than 20 operations', () => {
     const patch: Operation[] = Array(21).fill({ op: 'add', path: '/nodes/-', value: { role: 'text', conf: 1 } })
     
-    const { layout: newLayout, rejected } = applyEdit(initialLayout, patch)
+    const { layout: _newLayout, rejected } = applyEdit(initialLayout, patch)
     expect(rejected).toEqual(patch)
   })
 })

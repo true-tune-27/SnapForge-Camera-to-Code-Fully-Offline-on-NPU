@@ -136,7 +136,7 @@ describe('Component Resolver', () => {
       ]
     }
     const node: LayoutNode = { role: 'divider', conf: 1 }
-    const res = resolve(node, fuzzyIndex)
+    const _res = resolve(node, fuzzyIndex)
     
     // "divider" vs "DividerLine" => Levenshtein dist is 4. Max len is 11.
     // Score = 1 - 4/11 = 0.63 < 0.75. So it will fall back to Primitive.

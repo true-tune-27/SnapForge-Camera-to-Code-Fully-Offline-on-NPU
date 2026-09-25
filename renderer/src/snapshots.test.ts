@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { emitTsx } from './emit.js'
-import type { DesignSystemIndex, Layout } from '@snapforge/schema'
+import type { Layout } from '@snapforge/schema'
 import { readFileSync, readdirSync } from 'node:fs'
 import { resolve as pathResolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'

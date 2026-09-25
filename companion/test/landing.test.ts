@@ -6,9 +6,8 @@ import { exec } from 'node:child_process'
 import { promisify } from 'node:util'
 import * as git from 'isomorphic-git'
 import { landPayload } from '../src/landing/index.js'
-import { extractConventions } from '../src/index/conventions.js'
-import { extractTokens } from '../src/index/tokens.js'
-import type { DesignSystemIndex, ForgePayload } from '@snapforge/schema'
+
+import type { ForgePayload } from '@snapforge/schema'
 
 const execAsync = promisify(exec)
 
