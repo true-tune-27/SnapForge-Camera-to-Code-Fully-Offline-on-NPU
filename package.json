@@ -16,7 +16,7 @@
     "bench": "npm run bench --workspace=bench",
     "forge": "npm run forge --workspace=renderer",
     "accept": "npm run accept --workspace=bench",
-    "prepare": "npm run build --workspaces --if-present"
+    "prepare": "npm run build -w @snapforge/schema && npm run build -w @snapforge/renderer && npm run build -w @snapforge/companion && npm run build -w @snapforge/bench"
   },
   "engines": {
     "node": ">=22.0.0"
